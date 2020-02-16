@@ -68,6 +68,9 @@ function getBandsInTown(artist) {
 }
 //=========================FUnciton to Search OMDB======================================
 function getOMDB(movie) {
+   if(!movie){
+      movie="Mr Nobody"
+   }
 
    var OmdbUrl = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
 
@@ -137,7 +140,7 @@ function getSpotify(songName) {
 
       });
 
-
+   }
 //=============Random Spotify Songs and Information=================================//
 function getRead() {
    fs.readFile("random.txt", "utf8", function(error, data) {
@@ -145,20 +148,17 @@ function getRead() {
       // If the code experiences any errors it will log the error to the console.
       if (error) {
         return console.log(error);
+      }else {
+         console.log(data);
+         var dataArr = data.split(",");
+         runLiri(dataArr[0],dataArr[1]);
       }
-    
-      // We will then print the contents of data
-      console.log(data);
-    
-      // Then split it by commas (to make it more readable)
-      var dataArr = data.split(",");
-    
-      // We will then re-display the content as an array for later use.
-      console.log(dataArr);
+
+   
     
        });
    };
-}
+
 
 
 runLiri(appCommand, userSearch);
