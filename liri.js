@@ -152,13 +152,9 @@ function getRead() {
          console.log(data);
          var dataArr = data.split(",");
          runLiri(dataArr[0],dataArr[1]);
-      }
-
-   
+      }  
     
        });
    };
-
-
 
 runLiri(appCommand, userSearch);

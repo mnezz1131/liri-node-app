@@ -13,4 +13,10 @@ Lines 44-68 is the Bands In Town search criteria. Axios creates a call and retur
 
 Lines 70-101 is the OMDB search criteria. Axios creates a call and returns a data array that is then constructed with console.log's to access the relevant information.  This return is shown to the user and also saved in a log.text file.
 
-Lines 102-138 is the Spotify search criteria. Spotify creates a call and returns a data array that is then constructed with console.log's to access the relevant information.  This return is shown to the user and also saved in a log.text file.
+Lines 102-143 is the Spotify search criteria. Spotify creates a call and returns a data array that is then constructed with console.log's to access the relevant information.  This return is shown to the user and also saved in a log.text file.
+
+Lines 144-160 is the Do what it says function.  When the user types in do what it says it will pull in the random.txt file and display the contents of the file.
+
+
+
+Link to view demonstration https://drive.google.com/file/d/1SHhPQJUScZSe06uylGZX0XUrPl17yA7H/view
